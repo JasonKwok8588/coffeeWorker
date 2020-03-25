@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/user/user",
+    "pages/menu/menu",
+    "pages/order/order",
+    "pages/detail/userInfo/userInfo",
+    "pages/detail/userMap/userMap"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#333999",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/bar/bar1_1.png",
+        "selectedIconPath": "/images/bar/bar1.png"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "/images/bar/bar2_2.png",
+        "selectedIconPath": "/images/bar/bar2.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "/images/bar/bar3_3.png",
+        "selectedIconPath": "/images/bar/bar3.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/bar/bar4_4.png",
+        "selectedIconPath": "/images/bar/bar4.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "使用需要授权并配置permission字段"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

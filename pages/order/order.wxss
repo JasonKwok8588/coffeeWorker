@@ -1,0 +1,131 @@
+/* pages/order/order.wxss */
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+checkbox-group {
+  width: 100%;
+  height: 100%;
+}
+
+.order-wapper {
+  height: 100%;
+  width: 100%;
+}
+
+.order-scroll {
+  position: fixed;
+  border: 1rxp solid #eee;
+  height: 90%;
+  top: 0rpx;
+  left: 0rpx;
+}
+
+.order-item {
+  position: relative;
+  width: 100%;
+  height: 200rpx;
+  border: 1px solid #eee;
+  padding: 10rpx 50rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-checkbox {
+  height: 50rpx;
+  width: 50rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.item-pic {
+  height: 170rpx;
+  flex: 2;
+}
+
+.item-box {
+  flex: 6;
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  margin-left: 30rpx;
+  position: relative;
+  color: #333;
+  letter-spacing: 2rpx;
+}
+
+.peice-tool {
+  width: 100%;
+  position: absolute;
+  bottom: 20rpx;
+  left: 0rpx;
+  letter-spacing: 1rpx;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+}
+
+.right-good-num {
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  float: right;
+  width: 200rpx;
+  font-weight: 800;
+}
+
+.right-good-num view {
+  display: inline-block;
+  margin: 10rpx;
+}
+
+.dot {
+  color: white;
+  background: #333999;
+  border-radius: 50%;
+  height: 40rpx;
+  width: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.control {
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  border-top: 1rpx solid #eee;
+  width: 100%;
+  height: 10%;
+  box-shadow: 1rpx -2rpx 8rpx #eee;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  
+}
+.control-check{
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.total-btn{
+
+  /* margin-top: 10rpx; */
+  height: 80rpx;
+  width: 380rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 60rpx
+}
+
+.total-btn button{
+  background: #333999;
+  color: white;  
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 10rpx;
+}

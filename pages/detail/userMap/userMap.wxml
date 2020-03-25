@@ -1,0 +1,3 @@
+<!--pages/detail/userMap/userMap.wxml-->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="true" style="width:100%" ></map>
+<button open-type="getUserInfo" bindtap="poinHandle" >点击定位</button>

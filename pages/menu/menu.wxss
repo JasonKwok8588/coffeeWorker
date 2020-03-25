@@ -1,0 +1,285 @@
+/* pages/menu/menu.wxss */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-wapper {
+  background: #eee;
+}
+
+/*-------------------------------------------------------- 头部样式 */
+
+.menu-wapper {
+  position: relative;
+}
+
+.menu-head {
+  position: relative;
+  height: 350rpx;
+  width: 100%;
+}
+
+.head-swiper {
+  height: 350rpx;
+  width: 100%;
+}
+
+.head-swiper swiper-item {
+  width: 100%;
+  height: 100%;
+}
+
+.docBox {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.docBox view {
+  width: 20rpx;
+  height: 20rpx;
+  background: #999;
+  border-radius: 20rpx;
+  float: left;
+  margin: 0 10rpx;
+}
+
+.docBox .active {
+  width: 36rpx;
+  background: #333999;
+}
+
+/*-------------------------------------------------------- 头部样式 */
+
+/*-------------------------------------------------------- 菜单样式开始 */
+
+
+
+.menu-content scroll-view {
+  height: 100%;
+}
+
+.menu-left {
+  position: fixed;
+  left: 0;
+  top: 350rpx;
+  width: 180rpx;
+  /* flex: 2.5; */
+  height: 69%;
+  /* border:1px solid orange; */
+}
+
+.menu-right {
+  width: 500rpx;
+  position: fixed;
+  right: 0;
+  top: 350rpx;
+  /* flex: 7.5; */
+  /* border: 1px solid purple; */
+  height: 69%;
+  padding-left: 30rpx;
+  /* box-sizing: border-box; */
+}
+
+/* ------------------------------------------------ 左侧商品栏样式 */
+
+.left-content {
+  border: 2rpx solid rgba(128, 128, 128, 0.5);
+  /* background: white; */
+  height: auto;
+  border-top: none;
+  text-align: center;
+}
+
+.left-item {
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: white;
+  border-top: 1rpx solid rgba(128, 128, 128, 0.5);
+}
+
+.left-item-active {
+  border-left: 10rpx solid #333999;
+  background: transparent;
+}
+
+/* ------------------------------------------------ 右侧商品栏样式 */
+
+.right-box {
+  width: 100%;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+.right-title {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  font-weight: 800;
+  text-align: left;
+}
+
+.right-content {
+  width: 100%;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  /* padding-bottom: 20rpx; */
+}
+
+.right-content-item {
+  position: relative;
+  height: 130rpx;
+  line-height: 130rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1rpx solid #eee;
+}
+
+.right-content-item image {
+  width: 100rpx;
+  height: 90rpx;
+}
+
+.right-content-item text {
+  margin-left: 20rpx;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 24rpx;
+  white-space: nowrap;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.right-good-num {
+  position: absolute;
+  width: 150rpx;
+  height: 40rpx;
+  top: 0rpx;
+  right: 80rpx;
+  line-height: 30rpx;
+  text-align: center;
+  display: inline-block;
+}
+
+.right-good-num view {
+  display: inline-block;
+  height: 100%;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.right-good-num .num {
+  font-size: 24rpx;
+  margin: 0 10rpx;
+}
+
+.right-good-num .dot {
+  height: 40rpx;
+  line-height: 35rpx;
+  width: 40rpx;
+  background: #333999;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+}
+.peice-tool{
+  position: absolute;
+  left: 120rpx;
+  bottom: 15rpx;
+  height: 40rpx;
+  width: 300rpx;
+  line-height: 40rpx;
+}
+/* ------------------------------------------------ 右侧商品栏样式 */
+
+/* 购物车样式 */
+
+.shopCar {
+  height: 80rpx;
+  width: 80rpx;
+  /* border: 1px solid red; */
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50rpx;
+  right: 35rpx;
+  background: #333999;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.shopCar image {
+  vertical-align: middle;
+  width: 80%;
+  height: 80%;
+}
+
+.shopCar .point {
+  height: 30rpx;
+  width: 30rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0rpx;
+  left: -20rpx;
+  background: #333999;
+  color: #fff;
+  line-height: 30rpx;
+  font-weight: 800;
+  font-size: 24rpx;
+}
+
+/*------------------------------------------------------------------- 购物车内容 */
+
+.dialog-wapper {
+  width: 100%;
+  height: 300rpx;
+  position: fixed;
+  bottom: 0;
+  background: #eee;
+}
+
+.dialog-wapper scroll-view {
+  height: 250rpx;
+}
+
+.dialog-title {
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #eee;
+  font-size: 28rpx;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50rpx;
+}
+
+.shopCar-content {
+ height: 100%;
+ width: 100%;
+}
+
+.shopCar-content-item {
+  height: 100rpx;
+  position: relative;
+  padding: 0 50rpx;
+  border-bottom: 1rpx solid black;
+}
+.shopCar-content-item  .right-good-num{
+  top: 50rpx;
+  left: 600rpx;
+}

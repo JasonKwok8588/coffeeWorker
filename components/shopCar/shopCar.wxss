@@ -1,0 +1,155 @@
+/* components/shopCar/shopCar.wxss */
+
+/* 购物车样式 */
+
+.shopCar {
+  height: 80rpx;
+  width: 80rpx;
+  /* border: 1px solid red; */
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50rpx;
+  right: 35rpx;
+  background: #333999;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.shopCar image {
+  vertical-align: middle;
+  width: 80%;
+  height: 80%;
+}
+
+.shopCar .point {
+  height: 30rpx;
+  width: 30rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0rpx;
+  left: -20rpx;
+  background: #333999;
+  color: #fff;
+  line-height: 30rpx;
+  font-weight: 800;
+  font-size: 24rpx;
+}
+
+.dialog-wapper {
+  width: 100%;
+  height: 450rpx;
+  position: fixed;
+  bottom: 0;
+  background: #eee;
+}
+
+.dialog-wapper scroll-view {
+  height: 300rpx;
+}
+
+.dialog-title {
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #eee;
+  font-size: 28rpx;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50rpx;
+}
+
+.shopCar-content {
+  height: 100%;
+  width: 100%;
+}
+
+.shopCar-content-item {
+  height: 100rpx;
+  position: relative;
+  padding: 0 50rpx;
+  border-bottom: 1rpx solid black;
+}
+
+.shopCar-content-item  .right-good-num {
+  top: 50rpx;
+  left: 600rpx;
+}
+
+.right-good-num {
+  position: absolute;
+  width: 150rpx;
+  height: 40rpx;
+  top: 0rpx;
+  right: 80rpx;
+  line-height: 30rpx;
+  text-align: center;
+  display: inline-block;
+}
+
+.right-good-num view {
+  display: inline-block;
+  height: 100%;
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.right-good-num .num {
+  font-size: 24rpx;
+  margin: 0 10rpx;
+}
+
+.right-good-num .dot {
+  height: 40rpx;
+  line-height: 35rpx;
+  width: 40rpx;
+  background: #333999;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+}
+.shop-total{
+  height: 100rpx;
+  width: 100%;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  line-height: 100rpx;
+  letter-spacing: 5rpx;
+}
+
+.total-btn{
+  margin-top: 10rpx;
+  height: 80rpx;
+  width: 340rpx;
+  float: right;
+}
+
+.total-btn button{
+  background: #333999;
+  color: white;  
+  display: inline-block;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 10rpx;
+}
+.colum-price{
+  display: inline-block;
+  /* border:1rpx solid red; */
+  position: absolute;
+  bottom: 10rpx;
+  left: 40rpx;
+}
+.empty-box{
+  text-align: center;
+   color: #999;
+  font-size: 30rpx;
+  letter-spacing: 800;
+}
+.empty-car{
+  /* border: 1px solid red; */
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx auto;
+ 
+}

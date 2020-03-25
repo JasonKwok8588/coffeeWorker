@@ -1,0 +1,88 @@
+<!--pages/menu/menu.wxml-->
+<view class="menu-wapper">
+  <view class="menu-head">
+    <swiper class="head-swiper" indicator-dots="{{setBanner.indicatorDots}}" autoplay="{{setBanner.autoplay}}" interval="{{setBanner.interval}}" circular="{{setBanner.circular}}" vertical="{{setBanner.vertical}}" bindchange="bannerHandle">
+      <block wx:for="{{menuBanArr}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="docBox">
+      <view wx:for="{{menuBanArr}}" wx:key="index" class="dot {{index ==setBanner.num ? 'active' : '' }}"></view>
+    </view>
+  </view>
+  <view class="menu-content">
+    <view class="menu-left">
+      <scroll-view scroll-y scroll-top="{{leftScroll}}">
+        <view class="left-content ">
+          <block wx:for="{{navList}}" wx:key="index">
+            <view bindtap="leftHandle" data-i="{{index}}" class="left-item {{ index == idOp ? 'left-item-active':''}} " data-id="menu{{index}}">
+              <text>{{item.c_name}}</text>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="menu-right">
+      <scroll-view scroll-y bindscroll="rightHandle" scroll-into-view="{{rightIdOp}}" scroll-with-animation>
+
+        <block wx:for="{{navList}}" wx:key="index" wx:for-item="items">
+          <view class="right-box" id="menu{{index}}">
+
+            <view class="right-title">{{items.c_name}}</view>
+
+            <view class="right-content">
+              <block wx:for="{{items.list}}" wx:key="index">
+                <view class="right-content-item">
+                  <image src="{{item.url}}"></image>
+                  <text>{{item.goodsName}}</text>
+                  <view class="peice-tool">
+                    <text>￥{{item.price}}</text>
+                    <view class="right-good-num">
+                      <view class="dot" data-goods="{{item}}" data-proGoods="{{items.id}}" data-act="++" bindtap="setGoodsNumHandle">+</view>
+                      <view wx:if="{{selectGoods[items.id+''+item.id].num}}" class="num">{{ selectGoods[items.id+''+item.id].num }}</view>
+                      <view wx:if="{{selectGoods[items.id+''+item.id].num}}" class="dot" data-goods="{{item}}" data-proGoods="{{items.id}}" bindtap="setGoodsNumHandle">-</view>
+                    </view>
+                  </view>
+                </view>
+              </block>
+            </view>
+
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <shopcar showCar="{{showShopCar}}" shopNum="{{shopNum}}" goodsArr="{{selectGoods}}" bindopenshopcar='shopCarHandle' bindcloseShopCar='closeShopCar' bindshopcarplusnum='shopCarDotHandle' bindshopcarcutnum='shopCarDotHandle' total="{{total}}" bindclearShopCar="clearShopCar"></shopcar>
+ 
+  <!-- 
+ <view>
+  <view class="shopCar" bindtap="shopCarHandle">
+    <image mode="aspectFill" src="/images/shop-cat-on1.png"></image>
+    <view class="point" wx:if="{{shopNum}}">{{shopNum}}</view>
+  </view>
+  
+  <view wx:if="{{showShopCar}}" class="dialog-wapper">
+    <view class="dialog-title">
+      <text>我的购物车</text>
+      <text bindtap="closeShopCar">清空并关闭购物车</text>
+    </view>
+    <scroll-view scroll-y>
+      <view class="shopCar-content">
+        <view class="shopCar-content-item" wx:for="{{selectGoods}}" wx:key="index">
+          <text>{{selectGoods[index].goodsName}}</text>
+          <view class="right-good-num">
+            <view class="dot" data-goodsid="{{index}}"  data-act="++" bindtap="shopCarDotHandle">+</view>
+            <view wx:if="{{selectGoods[''+index]}}" class="num">{{ selectGoods[""+index].num }}</view>
+            <view wx:if="{{selectGoods[''+index]}}" class="dot" data-goodsid="{{index}}" bindtap="shopCarDotHandle">-</view>
+          </view>
+        </view>
+
+      </view>
+    </scroll-view>
+  </view>
+</view>
+   -->
+</view>

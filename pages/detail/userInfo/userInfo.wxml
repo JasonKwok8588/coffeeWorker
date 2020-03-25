@@ -1,0 +1,5 @@
+<!--pages/detail/userInfo/userInfo.wxml-->
+<view>昵称:{{userInfo.nickName}}</view>
+<view>国家:{{userInfo.country}}</view>
+<view>头像地址:{{userInfo.avatarUrl}}</view>
+<view>语言:{{userInfo.language}}</view>

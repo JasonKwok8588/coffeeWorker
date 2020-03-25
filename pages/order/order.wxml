@@ -1,0 +1,48 @@
+<!--pages/order/order.wxml-->
+<view class="order-wapper">
+
+
+  <scroll-view scroll-y class="order-scroll">
+    <checkbox-group bindchange="checkHandle">
+      <block wx:for="{{selectGoods}}" wx:key="index">
+        <!-- <label class="checkbox"> -->
+
+        <view class="order-item">
+          <checkbox class="order-checkbox" value="{{index}}" checked="{{item.checked}}">
+          </checkbox>
+          <view class="item-pic">
+            <image src="{{item.url}}"></image>
+          </view>
+
+          <view class="item-box">
+            <text>{{item.goodsName}}</text>
+            <view class="peice-tool">
+              <text>￥{{item.price*item.num}}</text>
+              <view class="right-good-num">
+                <view class="dot" data-goods="{{item}}" data-proGoods="{{index}}" data-act="++" bindtap="setGoodsNumHandle">+</view>
+                <view wx:if="{{selectGoods[''+index].num}}" class="num">{{ selectGoods[''+index].num }}</view>
+                <view wx:if="{{selectGoods[''+index].num}}" class="dot" data-goods="{{item}}" data-proGoods="{{index}}" bindtap="setGoodsNumHandle">-</view>
+              </view>
+            </view>
+          </view>
+
+        </view>
+
+        <!-- </label> -->
+      </block>
+    </checkbox-group>
+  </scroll-view>
+  <view class="control">
+    <view class="control-check">
+      <checkbox bindtap="checkAll" checked="{{allSelect}}"></checkbox>
+      <text>全选</text>
+      <text>￥{{total}}</text>
+    </view>
+
+    <view class="total-btn">
+        <button bindtap="delGoods">删除所选</button>
+        <button bindtap="payGoods">支付</button>
+      </view>
+  </view>
+
+</view>

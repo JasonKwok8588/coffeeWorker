@@ -1,0 +1,68 @@
+<!--pages/home/home.wxml-->
+<view>
+  <view class="head">
+    <view class="head-banner">
+      <swiper class="head-swiper" indicator-dots="{{setTopBanner.indicatorDots}}" circular="{{setTopBanner.circular}}" vertical="{{setTopBanner.vertical}}" autoplay="{{setTopBanner.autoplay}}" interva="{{setTopBanner.interval}}" bindchange="changeHandle">
+        <block wx:for="{{banner.topBan}}" wx:key="*this">
+          <swiper-item class="head-swiper-item">
+            <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="indicatorDots">
+        <view class="{{index==setTopBanner.num?'active':''}}" wx:for="{{banner.topBan}}" wx:key="*this">
+        </view>
+      </view>
+    </view>
+    <view class="head-box">
+      <view class="topBox  flex-box-row">
+        <view mode="aspectFill" class="left-box">
+          <image src="/images/home/pro1.jpg"></image>
+        </view>
+        <view class="right-box">
+          <image mode="aspectFill" src="/images/home/pro2.jpg"></image>
+          <image mode="aspectFill" src="/images/home/pro3.jpg"></image>
+        </view>
+      </view>
+      <view class="btmBox flex-box-row">
+        <image class="left" mode="aspectFill" src="/images/home/pro4.jpg"></image>
+        <image class="right" src="/images/home/pro5.jpg"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="center-box box-item-One ">
+    <view class="line-titile">咖啡的故事</view>
+    <scroll-view scroll-x>
+      <block wx:for="{{storyArr}}" wx:key="index">
+        <view class="scroll-item">
+          <image src="{{item.src}}"></image>
+          <text>{{item.text}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="center-box box-item-two">
+    <view class="line-titile">猜你喜欢</view>
+    <view class="center-banner">
+      <swiper indicator-active-color="{{setCenBanner.indColor}}" class="center-swiper" indicator-dots="{{setCenBanner.indicatorDots}}" circular="{{setCenBanner.circular}}" vertical="{{setCenBanner.vertical}}" autoplay="{{setCenBanner.autoplay}}" interva="{{setCenBanner.interval}}">
+        <block wx:for="{{banner.centerBan}}" wx:key="index">
+          <swiper-item class="center-swiper-item">
+            <image mode="aspectFit" src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class="center-box goods">
+    <view class="line-titile">猜你喜欢</view>
+    <view class="goods-box">
+      <block wx:for="{{goodArr}}" wx:key="index">
+        <view class="goods-item">
+          <image src="{{item.src}}"></image>
+          <text>{{item.text}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

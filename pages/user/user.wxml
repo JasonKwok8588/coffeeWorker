@@ -1,0 +1,32 @@
+<!--pages/user/user.wxml-->
+<view class="user-wapper">
+  <view class="user-head">
+    <view class="user-image">
+
+      <view class="not-login login-public" wx:if="{{showlogin}}">
+        请登录
+      </view>
+
+      <view class="login-public" wx:else>
+        <image src="{{userInfo.avatarUrl}}" class="login-public"></image>
+      </view>
+
+    </view>
+    
+  </view>
+
+  <button class="user-seeting" wx:if="{{showlogin}}" open-type="getUserInfo" bindtap="userLog">点击登录</button>
+
+  <view class="user-seeting" wx:else>
+    <text class="user-name" >欢迎登录!{{userInfo.nickName}}</text>
+
+    <navigator class="nav-public" url="/pages/detail/userInfo/userInfo">
+      <view class="">我的信息</view>
+    </navigator>
+      <view class="nav-public" bindtap="userAdsHandle">收货地址</view>
+    <navigator class="nav-public" url="/pages/detail/userMap/userMap">
+      <view class="">附近门店</view>
+    </navigator>
+    <view class="nav-public" bindtap="openSetting">授权信息</view>
+  </view>
+</view>

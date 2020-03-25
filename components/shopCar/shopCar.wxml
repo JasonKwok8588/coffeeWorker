@@ -1,0 +1,45 @@
+<!--components/shopCar/shopCar.wxml-->
+<view class='shopcar-wapper'>
+  <view class="shopCar" bindtap="shopCarHandle">
+    <image mode="aspectFill" src="/images/shop-cat-on1.png"></image>
+    <view class="point" wx:if="{{shopNum}}">{{shopNum}}</view>
+  </view>
+  <!-- wx:if="{{shopNum&&showShopCar}}" -->
+
+  <view wx:if="{{showCar}}" class="dialog-wapper">
+    <view class="dialog-title">
+      <text>我的购物车</text>
+      <text bindtap="closeShopCar">关闭购物车</text>
+    </view>
+    <view wx:if="{{shopNum}}">
+      <scroll-view scroll-y>
+        <view class="shopCar-content">
+          <view class="shopCar-content-item" wx:for="{{goodsArr}}" wx:key="index" wx:if="{{goodsArr[''+index].num}}">
+            <text>{{goodsArr[index].goodsName}}</text>
+            <text class='colum-price'>￥{{goodsArr[index].num*goodsArr[index].price}}</text>
+            <view class="right-good-num">
+              <view class="dot" data-goodsid="{{index}}" data-act="++" bindtap="shopCarPlusHandle">+</view>
+              <view wx:if="{{goodsArr[''+index]}}" class="num">{{ goodsArr[""+index].num }}</view>
+              <view wx:if="{{goodsArr[''+index]}}" class="dot" data-goodsid="{{index}}" bindtap="shopCarCutHandle">-</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="empty-box" wx:else>
+      <view class="empty-car">
+        <image src="/images/shop-cat-on1.png"></image>
+      </view>
+      <text>我好渴，快点选一些喝的！</text>
+
+    </view>
+
+    <view class="shop-total">
+      <text>总金额: ￥{{total}}</text>
+      <view class="total-btn">
+        <button bindtap="clearShopCar">清空</button>
+        <button bindtap="payShopCar">结算</button>
+      </view>
+    </view>
+  </view>
+</view>
